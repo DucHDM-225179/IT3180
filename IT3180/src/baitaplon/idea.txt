@@ -1,0 +1,148 @@
+Quản lý thông tin các khoản thu phí đóng góp
+ 1. Thêm khoản thu phí đóng góp mới
+   1.1 Xác định thông tin cho khoản thu phí mới
+   1.2 Kiểm tra dữ liệu của khoản thu phí mới
+   1.3 Thêm khoản thu phí mới vào cơ sở dữ liệu
+ 2. Thay đổi khoản thu phí đóng góp
+   2.1 Tìm khoản thu phí đóng góp cũ
+   2.2 Thay đổi các thông tin cần thiết
+   2.3 Kiểm tra các thông tin mới thay đổi
+   2.4 Ghi nhận thay đổi vào cơ sở dữ liệu
+ 3. Xoá khoản thu phí đóng góp
+   3.1 Tìm khoản thu phí đóng góp cần xoá
+   3.2 Kiểm tra có thể xoá khoản thu phí đóng góp này không
+   3.3 Xoá khoản thu phí đóng góp ra khỏi cơ sở dữ liệu
+ 4. Thống kê các khoản thu phí đóng góp
+   4.1 Xác định thông tin khoản thu phí cần kiểm tra
+   4.2 Lấy danh sách các hộ gia đình cấn đóng góp khoản thu phí
+   4.3 Hiển thị thông tin thống kê
+
+Quản lý thu phí các hộ gia đình
+ 1. Xem thông tin thu phí các hộ gia đình
+   1.1 Tra cứu thông tin hộ gia đình
+   1.2 Hiển thi thông tin các khoản thu phí
+ 2. Ghi nhận thông tin thu phí các hộ gia đình
+   2.1 Cập nhật cơ sở dữ liệu để xác nhận thu phí
+ 3. Cập nhật thông tin thu phí các hộ gia đình
+   3.1 Tra cứu thông tin các hộ gia đình
+   3.2 Tra cứu thông tin các khoản thu phí bắt buộc
+   3.3 Tra cứu thông tin các khoản thu phí tự chọn
+   3.4 Kiểm tra đã tồn tại trong cơ sở dữ liệu chưa
+   3.5 Ghi nhận vào cơ sở dữ liệu
+
+Quản lý thông tin hộ gia đình
+ 1. Đăng ký hộ gia đình
+   1.1 Xác định thông tin hộ gia đình
+   1.2 Kiểm tra thông tin hợp lệ
+   1.3 Thêm hộ gia đình vào cơ sở dữ liệu
+ 2. Cập nhật thành viên trong hộ gia đình
+   2.1 Xác định thông tin thành viên
+   2.2 Xác định thông tin hộ gia đình
+   2.3 Kiểm tra dữ liệu
+   2.4 Cập nhật thành viên vào cơ sở dữ liệu
+
+Quản lý thông tin người thuê
+ 1. Đăng ký tài khoản
+   1.1 Xác định thông tin tài khoản
+   1.2 Kiểm tra thông tin tài khoản
+   1.3 Thêm tài khoản vào cơ sở dữ liệu
+ 2. Thay đổi mật khẩu (admin-only)
+   2.1 Xác định tài khoản
+   2.2 Cấp mật khẩu mới, ghi nhận vào cơ sở dữ liệu
+
+----------------------------------------------------------------
+WBS
+Hệ thống mới
+ 1. Hỗ trợ phát triển
+  1.1. Thu thập yêu cầu phần mềm
+  1.2. Xác định nhu cầu người dùng
+ 2. Phát triển phần mềm
+  2.1 Xây dựng cấu trúc cơ sở dữ liệu
+   2.1.1 Thiết kế các bảng dựa vào yêu cầu
+   2.1.2 Kiểm tra
+  2.2 Xây dựng hệ thống tương tác với cơ sở dữ liệu
+   2.2.1 Thiết kế hệ thống API dựa vào cơ sở dữ liệu đã có
+   2.2.2 Lập trình
+   2.2.3 Kiểm thử
+  2.3 Xây dựng hệ thống hỗ trợ người dùng sử dụng
+   2.3.1 Xây dựng khung hệ thống GUI
+   2.3.2 Lập trình
+   2.3.3 Cho khách hàng sử dụng thử
+ 3. Chuyển giao
+  3.1 Khách hàng xác nhận phần mềm
+  3.2 Chuyển giao phần mềm + tài liệu sử dụng
+
+----------------------------------------------------------------
+Công việc / hoạt động  | Mối nguy | Rủi ro | Mức độ | Chiến lược | Biện pháp
+
+(
+ Thu thập yêu cầu phần mềm, 
+ Thu thập sai yêu cầu,
+ Ảnh hưởng tới các bước thiết kế, tốn thời gian làm,
+ Nghiêm trọng,
+ Phòng tránh,
+ Giao tiếp với khách hàng để đảm bảo yêu cầu
+)
+
+(
+ Xác định nhu cầu người dùng,
+ Đánh giá sai về nhu cầu người dùng,
+ Ảnh hưởng các bước thiết kế, lãng phí tài nguyên không cần thiết,
+ Nghiêm trọng,
+ Phòng tránh,
+ Khảo sát, giao tiếp để dánh giá nhu cầu
+)
+
+(
+ Khách hàng sử dụng thử phần mềm GUI,
+ Khách hàng không thao tác, sử dụng được,
+ Khách hàng yêu cầu làm lại phần mềm / khách hàng huỷ dự án,
+ Nghiêm trọng,
+ Phòng tránh,
+ Kiểm thử kĩ lưỡng trước khi đưa cho khách hàng thử nghiệm
+)
+
+
+
+----------------------------------------------------------------
+TABLE ChiPhi:
+ + IDPhi (Key)
+ + TenPhi (String)
+ + BatBuoc (Yes/No)
+ + DongTheoDienTich (Yes/No)
+ + DongTheoDauNguoi (Yes/No)
+ + MucDong (Int, là mức đóng / m2 nếu DongTheoDienTich, tuong tu nhung cai khac)
+           (làm tròn lên)
+
+TABLE CaNhan:
+ + IDCaNhan (Key)
+ + HoVaTen (String)
+ + IDNha (Foreign Key)
+ + ChuHo (Yes/No)
+ + LienLac (String)
+
+TABLE Nha:
+ + IDNha (Key)
+ + IDChuNha (Foreign Key)
+ + ConThue (Yes/No)
+ + DienTich (Real, m2)
+
+TABLE Nha_ChiPhi:
+ + IDNha (Key) (Foreign Key)
+ + IDPhi (Key) (Foreign Key)
+ + ThoiGian (Key, Thang|Nam eg. 022020)
+ + MucTien (Int, tính dựa vào IDNha và IDPhi)
+ + DaDong (Int)
+
+TABLE Nha_DichVu:
+ + IDNha (Key) (Foreign Key)
+ + IDPhi (Key) (Foreign Key)
+
+----------------------------------------------------------------
+Mật khẩu: Salt (Random-Gen khi thêm vào CSDL) + Hash
+
+----------------------------------------------------------------
+
+Su dung:
+Database: SQLite (Lí do, chỉ 1 người quản lý sử dụng tại một thời điểm, database tương đối bé)
+NgonNgu : Java
