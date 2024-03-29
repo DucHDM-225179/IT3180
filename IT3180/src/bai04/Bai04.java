@@ -1,4 +1,4 @@
-package Bai04;
+package bai04;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
-public class bai04 {
+public class Bai04 {
 	private static JFrame frm_main;
 	private static JPanel pal_username;
 	private static JLabel lbl_username;
@@ -103,8 +103,7 @@ public class bai04 {
 					}
 					else {
 						c.setForeground(Color.BLACK);
-						if (!isRowSelected(row))
-							c.setBackground(row % 2 == 1 ? getBackground() : Color.LIGHT_GRAY);
+						c.setBackground(row % 2 == 1 ? getBackground() : Color.LIGHT_GRAY);
 					}
 					
 			        return c;
@@ -127,15 +126,12 @@ public class bai04 {
 					String password = txt_password.getText();
 					try {
 						boolean success = true;
-						if (connection.isClosed()) {
-							
-						}
 						ResultSet rs = statement.executeQuery("select password from bai04 where username='" + username +"'");
 						if (!rs.next()) {
 							success = false;
 						}
 						else {
-							success = password.equals(rs.getString("password"));
+							success = password.equals(rs.getString("password")); // don't
 						}
 						
 						if (success) {

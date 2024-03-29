@@ -46,9 +46,19 @@ Quản lý thông tin người thuê
    1.1 Xác định thông tin tài khoản
    1.2 Kiểm tra thông tin tài khoản
    1.3 Thêm tài khoản vào cơ sở dữ liệu
- 2. Thay đổi mật khẩu (admin-only)
+ 2. Thay đổi mật khẩu
    2.1 Xác định tài khoản
    2.2 Cấp mật khẩu mới, ghi nhận vào cơ sở dữ liệu
+
+Backup cơ sở dữ liệu
+ 1. Backup
+   1.1 Chọn các mục cần backup
+   1.2 Kiểm tra backup được không
+   1.3 Tiến hành backup
+ 2. Restore
+   2.1 Chọn file restore
+   2.2 Kiểm tra conflict
+   2.3 Tiến hành restore
 
 ----------------------------------------------------------------
 WBS
@@ -79,8 +89,8 @@ Công việc / hoạt động  | Mối nguy | Rủi ro | Mức độ | Chiến l
  Thu thập yêu cầu phần mềm, 
  Thu thập sai yêu cầu,
  Ảnh hưởng tới các bước thiết kế, tốn thời gian làm,
- Nghiêm trọng,
- Phòng tránh,
+ Cao,
+ Giảm thiểu,
  Giao tiếp với khách hàng để đảm bảo yêu cầu
 )
 
@@ -88,18 +98,27 @@ Công việc / hoạt động  | Mối nguy | Rủi ro | Mức độ | Chiến l
  Xác định nhu cầu người dùng,
  Đánh giá sai về nhu cầu người dùng,
  Ảnh hưởng các bước thiết kế, lãng phí tài nguyên không cần thiết,
- Nghiêm trọng,
- Phòng tránh,
+ Cao,
+ Giảm thiểu,
  Khảo sát, giao tiếp để dánh giá nhu cầu
 )
 
 (
  Khách hàng sử dụng thử phần mềm GUI,
- Khách hàng không thao tác, sử dụng được,
+ Khách hàng không thao tác, sử dụng được (lỗi dependency, lỗi version, lỗi thiết kế, ...),
  Khách hàng yêu cầu làm lại phần mềm / khách hàng huỷ dự án,
- Nghiêm trọng,
- Phòng tránh,
+ Cao,
+ Giảm thiểu,
  Kiểm thử kĩ lưỡng trước khi đưa cho khách hàng thử nghiệm
+)
+
+(
+ Xây dựng hệ thống API tương tác với cơ sở dữ liệu,
+ Chậm tiến độ thời gian,
+ Không thể tiến hành xây dựng phần mềm GUI,
+ Trung bình,
+ Chuyển rủi ro,
+ Xây dựng API dựa vào library giao tiếp với CSDL có sẵn
 )
 
 
@@ -139,10 +158,7 @@ TABLE Nha_DichVu:
  + IDPhi (Key) (Foreign Key)
 
 ----------------------------------------------------------------
-Mật khẩu: Salt (Random-Gen khi thêm vào CSDL) + Hash
-
-----------------------------------------------------------------
 
 Su dung:
-Database: SQLite (Lí do, chỉ 1 người quản lý sử dụng tại một thời điểm, database tương đối bé)
+Database: SQLite (Lí do: ít người quản lý sử dụng tại một thời điểm, database tương đối bé)
 NgonNgu : Java
