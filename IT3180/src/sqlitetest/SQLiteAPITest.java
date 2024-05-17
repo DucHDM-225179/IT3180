@@ -3,6 +3,7 @@ package sqlitetest;
 import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -48,6 +49,19 @@ public class SQLiteAPITest {
 		
 		return true;
 	}
+	private static void getRandomUser() {
+		try {
+			ResultSet rs = statement.executeQuery("SELECT * FROM test01 ORDER BY RANDOM() LIMIT 1");
+			while (rs.next()) {
+				System.out.println(rs.getString("username"));
+				System.out.println(rs.getString("password"));
+			}
+			
+		}
+		catch (SQLException e) {
+			e.printStackTrace(System.err);
+		}
+	}
 	
 	private static boolean addRandomUser() {
 		String username = genRandomString(3);
@@ -70,7 +84,12 @@ public class SQLiteAPITest {
 			for (int i = 0; i < 10000; ++i) {
 				addRandomUser();
 				if (i % 100 == 0) {
+					long start = System.nanoTime();
 					System.out.print('=');
+					getRandomUser();
+					long end = System.nanoTime();
+					
+					System.out.println("Time taken: " + (end-start)/1000);
 				}
 			}
 			System.out.println("Done");
